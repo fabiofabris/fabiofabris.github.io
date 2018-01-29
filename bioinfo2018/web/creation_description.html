@@ -1,0 +1,106 @@
+<?php require 'template.loader.php';?>
+
+<html>
+  <head>
+
+    <title>Dataset creation description</title>
+
+    <kentIncludeMeta>
+      <meta name="description" content="" />
+      <meta name="keywords" content="" />
+    </kentIncludeMeta>
+
+    <kentIncludeFavicon />
+    <kentIncludeCSS /> 
+
+    <link rel="stylesheet" media="all" type="text/css" href="/styles/v2/WebStandard.css" />
+
+    <script type="text/javascript" language="javascript" src="data.js"></script>
+    <style type="text/css" class="init"></style>
+
+</head>
+
+<body>
+
+    <kentPage>
+      <kentPageHeader>
+	<kentGlobalHeader />
+	<kentDepartmentHeader />
+      </kentPageHeader>
+
+      <kentPageBody> 
+
+	<font size="4">
+	<br><br>
+	<h1>Dataset creation description</h1>
+	<br>
+
+	<h2>Collection of Data About Genes (the Instances) and Classes</h2>
+
+	  <p>Age-related brain (cerebellum, cerebrum, hippocampus and striatum)
+		gene expression was collected from GEO and AgeMap using 118 mouse brain
+		samples. Several filtering and post-processing steps were carried out,
+		and at the end of these steps we retrieved three sets of human genes, respectively: "overexpressed
+		with age in the brain", "underexpressed with age in the brain", and with "no change in expression with age in the brain".
+		The link to the full paper with more details about the instance creation procedure will be available in this page after publication.</p>
+
+          <br>
+
+	<p>In the final dataset, the proportion of human protein-coding genes within each class is
+	2.4%, 0.8% and 96.8% for the classes `overexpressed', `underexpressed'
+	and `no change of expression' with age in the brain, respectively.</p>
+
+<br>
+
+<h2>Gene Ontology (GO) Terms-based Features</h2>
+
+<p>
+The instances (genes) were described by features representing the presence or absence of a GO term. 
+We use GO term features because they are very well-known and 
+easy to interpret - they use a controlled vocabulary, curated 
+by experts, so the terms have well-defined biological meanings. 
+</p>
+
+<br>
+
+<p>
+The list of GO terms associated with each gene was retrieved from the
+<a href="http://www.ncbi.nlm.nih.gov/gene">NCBI web page</a> (retrieved on the 18th of April 2017), and
+the Gene Ontology definition (retrieved on the 14th of March 2017) was
+downloaded from the <a href="http://geneontology.org/page/download-ontology#go-basic.obo">Gene Ontology web page</a>.
+</p>
+
+<br>
+
+<p>
+We have used the GO hierarchy to expand the set of GO terms associated with
+each instance (gene) to include the list of all its ancestors, and we have eliminated
+GO terms that annotate less than 10 instances. After these steps, we ended
+up with a dataset with 17,684 genes (instances) and 7489 GO terms
+(features).  We also added to the dataset a numerical feature whose value is
+the total number of GO terms annotated for a gene.
+</p>
+
+<br>
+
+<p>Again, the link to the paper with a more detailed description of the creation of the dataset will be
+available on this page after its publication.</p>
+
+
+
+	</font>
+
+
+      </kentPageBody>
+
+      <kentPageFooter>
+	<kentDepartmentFooter />
+	<kentGlobalFooter />
+      </kentPageFooter>
+
+    </kentPage>
+
+  </body>
+</html>
+
+
